@@ -2,7 +2,7 @@
 
 int s;							//setting
 s = fcntl(fd,F_GETFL);			//get flags
-s |= 0_SYNC;					//set SYNC bit
+s |= 0_SYNC;					//set SYNC bit-负负得正
 result = fcntl(fd,F_SETFL,s);	//set flags
 if(result == 1){				//if error
 	perror("setting SYNC");		//report
