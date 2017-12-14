@@ -9,8 +9,9 @@ int main(int argc, char const *argv[])
 {
 	int response;
 	tty_mode(0);
-	set_crmode();
+	set_cr_noecho_mode();
 	response = get_response(QUESTION);
+	tty_mode(1);
 	return response;
 }
 
